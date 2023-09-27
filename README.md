@@ -38,15 +38,40 @@ the following command to test it in the console.
 $ (venv) python chat.py
 ```
 
-Now for deployment follow my tutorial to implement `app.py` and `app.js`.
+Objective: The primary goal of this project was to create a user-friendly and informative chatbot specifically tailored to the needs of farmers in Tamil Nadu, India. The chatbot aimed to provide instant assistance and information related to agriculture, crops, weather, and soil conditions.
 
-## Watch the Tutorial
-[![Alt text](https://img.youtube.com/vi/a37BL0stIuM/hqdefault.jpg)](https://youtu.be/a37BL0stIuM)  
-[https://youtu.be/a37BL0stIuM](https://youtu.be/a37BL0stIuM)
+Technologies and Libraries Used:
 
-## Note
-In the video we implement the first approach using jinja2 templates within our Flask app. Only slight modifications are needed to run the frontend separately. I put the final frontend code for a standalone frontend application in the [standalone-frontend](/standalone-frontend) folder.
+Python Programming Language: Python served as the foundation for building the chatbot's core logic and functionality. Its versatility and robust ecosystem of libraries made it an ideal choice.
 
-## Credits:
-This repo was used for the frontend code:
-https://github.com/hitchcliff/front-end-chatjs
+PyTorch: To enable natural language understanding and response generation, PyTorch, a powerful deep learning framework, was employed. PyTorch allowed us to design and train a neural network capable of processing and generating human-like responses to user queries.
+
+Flask Framework: Flask, a lightweight web framework for Python, was integrated to create the chatbot's user interface. This web-based interface enabled farmers to interact with the chatbot seamlessly.
+
+Natural Language Processing (NLP):
+
+NLTK (Natural Language Toolkit): NLTK was utilized for critical NLP tasks such as tokenization (breaking text into words), stemming (reducing words to their root form), and other language processing tasks. These techniques improved the chatbot's ability to understand user queries effectively. JSON Data Format: The chatbot's knowledge base, including responses to various queries, was structured and stored in a JSON (JavaScript Object Notation) file. JSON's simplicity and readability made it a suitable choice for organizing and retrieving data.
+
+Key Components and Workflow:
+
+Neural Network Model (PyTorch): The core of the chatbot was its neural network model. This model, defined in the NeuralNet class, was responsible for processing user queries and generating appropriate responses.
+
+Training Data: The chatbot's knowledge base was created by gathering agricultural intents and patterns. These intents encompassed common queries farmers might have, ranging from crop information to weather updates.
+
+Bag-of-Words and One-Hot Encoding: To make sense of user input, the chatbot used techniques like bag-of-words and one-hot encoding to convert text data into a numerical format suitable for neural network processing.
+
+Flask-Based User Interface: Farmers interacted with the chatbot through a user-friendly web interface created using Flask. They could input queries, and the chatbot provided real-time responses.
+
+Training and Deployment:
+
+Training Process: The neural network model was trained using the gathered training data and PyTorch's deep learning capabilities. The training process involved multiple epochs to optimize the model's performance.
+
+Model Saving: Once the model was trained successfully, its state, along with essential parameters like input size and output size, was saved to a file for later use.
+
+Integration with Flask: The trained model was integrated into the Flask-based web interface. This integration allowed farmers to access the chatbot through a web browser.
+
+Usage and Benefits:
+
+The chatbot served as a valuable resource for Tamil Nadu farmers:
+
+It provided quick and accurate responses to a wide range of agricultural queries. Farmers could inquire about crop growth, suitable fertilizers, climatic conditions, and detailed crop descriptions. Real-time weather updates specific to different regions of Tamil Nadu were offered, enabling farmers to make informed decisions about farming practices. In conclusion, the development of the Tamil Nadu Farmer Chatbot was a multidisciplinary effort that harnessed the power of Python, PyTorch, Flask, and NLP techniques to create a highly beneficial tool for the farming community. The chatbot's ability to provide tailored agricultural information played a crucial role in improving farming practices and productivity in the region.
